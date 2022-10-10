@@ -5,8 +5,36 @@ import java.util.Scanner;
 public class App {
 
     //todo Task 1
-    public void largestNumber(){
-        // input your solution here
+    public void largestNumber() {
+        Scanner scanner = new Scanner (System.in);
+        double number;
+        int count = 1;
+        double max = 0;
+
+        do {
+            System.out.print("Number " + count + ": ");
+            number = scanner.nextFloat();
+
+            if (count == 1 && number <= 0) {
+                System.out.println("No number entered.");
+                break;
+            }
+
+            if ((number > max)) {
+                max = number;
+
+            }
+
+            if (number <= 0) {
+
+                System.out.printf( "The largest number is "+ "%.2f", max);
+                System.out.println();
+
+
+            }
+            count++;
+
+        } while (number > 0);
     }
 
     //todo Task 2
