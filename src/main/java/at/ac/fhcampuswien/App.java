@@ -39,7 +39,24 @@ public class App {
 
     //todo Task 2
     public void stairs(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        int k = 1;
+        System.out.print("n: ");
+        int rows = scanner.nextInt();
+
+
+        if(rows <= 0) {
+            System.out.println("Invalid number!");
+        } else{
+            for (int i = 1; i <= rows; i++) {
+                for (int i1 = 0; i < i ; i++) {
+                    System.out.print(k++ + " ");
+
+                }
+                System.out.println();
+            }
+        }
+
     }
 
     //todo Task 3
