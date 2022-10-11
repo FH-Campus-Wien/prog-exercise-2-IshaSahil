@@ -61,7 +61,7 @@ public class App {
 
     //todo Task 3
     public void printPyramid(){
-        // input your solution here
+
     }
 
     //todo Task 4
@@ -71,7 +71,42 @@ public class App {
 
     //todo Task 5
     public void marks(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int count5 = 0;
+        int countNum = 1;
+        boolean isInput = true;
+
+        while (isInput) {
+            System.out.print("Mark " + countNum + ": ");
+            int number = scanner.nextInt();
+
+            if (number > 0 && number <= 5) {
+                sum = sum + number;
+                countNum++;
+
+                if (number == 5) {
+                    count5++;
+                }
+
+            } else if (number < 0 || number > 5) {
+                System.out.println("Invalid mark!");
+
+            }
+            if (number == 0) {
+                float mean;// / i
+                if (countNum == 1){
+                    mean = (float) sum / (countNum);
+                } else {
+                    mean = (float) sum / (countNum - 1);
+                }
+                System.out.printf("Average: " + "%.2f", mean);
+                System.out.println();
+                System.out.println("Negative marks: " + count5);
+                isInput = false;
+
+            }
+        }
     }
 
     //todo Task 6
