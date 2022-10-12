@@ -6,7 +6,7 @@ public class App {
 
     //todo Task 1
     public void largestNumber() {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
         double number;
         int count = 1;
         double max = 0;
@@ -27,7 +27,7 @@ public class App {
 
             if (number <= 0) {
 
-                System.out.printf( "The largest number is "+ "%.2f", max);
+                System.out.printf("The largest number is " + "%.2f", max);
                 System.out.println();
 
 
@@ -38,35 +38,46 @@ public class App {
     }
 
     //todo Task 2
-    public void stairs(){
+    public void stairs() {
         Scanner scanner = new Scanner(System.in);
-        int k = 1;
         System.out.print("n: ");
-        int rows = scanner.nextInt();
+        int n = scanner.nextInt();
+        int i, j, zahl = 1;
 
-
-        if(rows <= 0) {
+        if (n < 0) {
             System.out.println("Invalid number!");
-        } else{
-            for (int i = 1; i <= rows; i++) {
-                for (int i1 = 0; i < i ; i++) {
-                    System.out.print(k++ + " ");
-
-                }
-                System.out.println();
-            }
         }
 
+        for (i = 1; i <= n; i = i + 1) {
+            for (j = 1; j <= i; j++) {
+                System.out.println(zahl + " ");
+                zahl = zahl + 1;
+            }
+            System.out.println();
+        }
     }
+
 
     //todo Task 3
-    public void printPyramid(){
+    public void printPyramid() {
+
+        int i = 6, j, k;
+        for (j = 1; j <= i; j++) {
+            for (k = i; k > j; k--) {
+                System.out.print(" ");
+            }
+            for (k = 1; k < j * 2; k = k + 1)
+                System.out.print("*");
+        }
+        System.out.println();
 
     }
+
+
 
     //todo Task 4
     public void printRhombus(){
-        // input your solution here
+
     }
 
     //todo Task 5
@@ -110,8 +121,31 @@ public class App {
     }
 
     //todo Task 6
-    public void happyNumbers(){
-        // input your solution here
+    public void happyNumbers() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("n: ");
+        int number  = scanner.nextInt();
+        int digit;
+        int sum = 0;
+
+                while(number !=1 && number !=4){
+                    while (number>0){
+                        digit = number % 10;
+                        sum = (digit*digit) + sum;
+                        number = number / 10;
+
+
+                    }
+                    number = sum;
+                    sum =0;
+                }
+
+                if (number == 1) {
+                    System.out.println("Happy number!");
+                }else {
+                    System.out.println("Sad number!");
+                }
     }
 
     public static void main(String[] args){
