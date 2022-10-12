@@ -85,7 +85,7 @@ public class App {
         System.out.print("c: ");
         char c= scanner.next().charAt(0);
 
-        if (h%2==0) {
+        if (h%2==0){
             System.out.println("Invalid number!");
             return;
         }
