@@ -41,16 +41,16 @@ public class App {
     public void stairs() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("n: ");
-        int n = scanner.nextInt();
+        int n= scanner.nextInt();
         int i, j, zahl = 1;
 
         if(n<0) {
             System.out.println("Invalid number!");
         }
 
-        for (i = 1; i <= n; i = i + 1) {
-            for (j = 1; j <= i; j++) {
-                System.out.println(zahl + " ");
+        for (i=1; i <= n; i = i+ 1) {
+            for (j=1; j<=i;j++) {
+                System.out.print(zahl+ " ");
                 zahl = zahl + 1;
             }
             System.out.println();
