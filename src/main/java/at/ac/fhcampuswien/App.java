@@ -59,17 +59,18 @@ public class App {
 
 
     //todo Task 3
-    public void printPyramid() {
+    public void printPyramid(){
 
-        int i = 6, j, k;
-        for (j = 1; j <= i; j++) {
-            for (k = i; k > j; k--) {
+        int i=6, j, k;
+        for (j=1; j<=i; j++) {
+            for (k=i; k>j; k--) {
                 System.out.print(" ");
             }
-            for (k = 1; k < j * 2; k = k + 1)
+            for (k=1; k<j*2; k=k+1){
                 System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println();
 
     }
 
