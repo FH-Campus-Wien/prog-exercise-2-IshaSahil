@@ -44,7 +44,7 @@ public class App {
         int n = scanner.nextInt();
         int i, j, zahl = 1;
 
-        if (n < 0) {
+        if(n<0) {
             System.out.println("Invalid number!");
         }
 
@@ -78,10 +78,52 @@ public class App {
     //todo Task 4
     public void printRhombus(){
 
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("h: ");
+        int h= scanner.nextInt();
+        System.out.print("c: ");
+        char c= scanner.next().charAt(0);
+
+        if (h%2==0) {
+            System.out.println("Invalid number!");
+            return;
+        }
+        int i, j, k, z;
+
+        for (j=1; j<=h/2+1; j++){
+            for (k=h/2+1; k>j; k--){
+    System.out.print(" ");
+
+            }
+            for (z=j; z>0; z--) {
+                char b = (char) (c - z+1);
+                System.out.print(b);
+            }
+            for (i=1; i<j; i++) {
+                char b = (char) (c - i);
+                System.out.print(b);
+            }
+            System.out.println();
+
+        }
+        for ( j=h/2; j>=1; j--){
+            for (k=h/2; k>=j; k--){
+                System.out.print(" ");
+            }
+            for (z=j; z>0; z--) {
+                char b = (char) (c - z+1);
+                System.out.print(b);
+            }
+            for (i=1; i<j; i++) {
+                char b = (char) (c - i);
+                System.out.print((b));
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 5
-    public void marks(){
+    public void marks() {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
         int count5 = 0;
@@ -121,6 +163,7 @@ public class App {
     }
 
     //todo Task 6
+
     public void happyNumbers() {
         Scanner scanner = new Scanner(System.in);
 
