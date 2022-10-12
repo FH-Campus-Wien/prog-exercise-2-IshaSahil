@@ -93,7 +93,7 @@ public class App {
 
         for (j=1; j<=h/2+1; j++){
             for (k=h/2+1; k>j; k--){
-    System.out.print(" ");
+                System.out.print(" ");
 
             }
             for (z=j; z>0; z--) {
@@ -117,7 +117,7 @@ public class App {
             }
             for (i=1; i<j; i++) {
                 char b = (char) (c - i);
-                System.out.print((b));
+                System.out.print(b);
             }
             System.out.println();
         }
