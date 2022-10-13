@@ -168,23 +168,23 @@ public class App {
     public void happyNumbers() {
         Scanner scanner = new Scanner(System.in);
 
+        // unhappy zahlen: lange if bedingung mit oder
         System.out.print("n: ");
-        int number  = scanner.nextInt();
+        int number = scanner.nextInt();
         int digit;
         int sum = 0;
 
-                while(number !=1 && number !=4){
+
+                while (number != 1 && number != 4){
                     while (number>0){
                         digit = number % 10;
                         sum = (digit*digit) + sum;
                         number = number / 10;
-
-
                     }
-                    number = sum;
-                    sum =0;
-                }
 
+                    number=sum;
+                    sum = 0;
+                }
                 if (number == 1) {
                     System.out.println("Happy number!");
                 }else {
